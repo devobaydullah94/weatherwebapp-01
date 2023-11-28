@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Weather app" />
+        <meta name="keywords" content="WeatherApp, Forecast" />
+        <meta name="author" content="Md Obaydullah" />
+
+        <!-- Site Title -->
+        <title>SkyVue Weather App</title>
+        <!-- Site favicon -->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+
+        <!--Material Icon -->
+        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/weather-card.css">
+        <link rel="stylesheet" type="text/css" href="css/forecast-card.css">
+    </head>
+
+    <body>
+
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="navbar-sticky">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="logo text-uppercase" href="index.html">
+                    <img src="images/logo/logo-dark.png" alt=""/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html #weather-section" class="nav-link">Weather</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html #forecast-section" class="nav-link">Forecast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html #faq" class="nav-link">Faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html #contact" class="nav-link">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+        
+        <!-- Forecast Start -->
+        <section class="section bg-light overflow-hidden" id="forecast-section-page">
+          <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 text-center">
+                        <div class="forecast-card-container">
+                        <div class="forecast-card-body">
+                            <!-- Weather Heading -->
+                            <h2 class="weather-card-heading heading-page">5 Days Forecast Information</h2>
+                            <!-- Input Button -->
+                            <div class="input-group">
+                            <input type="text" class="form-control" id="cityInput-2" required="" placeholder="Enter city name">
+                            <button onclick="getForecast()">View Forecast</button>
+                            </div>
+                            <!-- Forecast Card -->
+                            <div class="forecast-card-details card-page" id="forecast-card" style="display: none;">
+                            <div class="circle1"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                            <div class="temperature-button">
+                                <h1 class="forecast-button" id="forecast-button">
+                                    <a class='celsius active' id='celsiusbtn' href="#">&deg;C</a>
+                                    <span class='divider secondary'>|</span>
+                                    <a class='fahrenheit' id='fahrenheitbtn' href="#">&deg;F</a>
+                                </h1>
+                            </div>
+                            <div class="content" id="forecast-content">
+                                <!-- Forecast data will be displayed here -->
+                            </div>
+                            </div>
+                        </div>
+        
+                        <div id="credit-text-2" style="display: none;">
+                            <p>This App Created By Md Obaydullah</p>
+                            <p>Thank You For Using This App</p>
+                        </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Forecast End -->
+
+        <!-- footer & cta start -->
+        <section class="footer bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <div class="footer-logo mb-4">
+                            <a href="#">
+                                <img src="images/logo/logo-light.png" alt="" />
+                            </a>
+                        </div>
+                        <a href="#" class="text-white">info@skyvue.com</a>
+                        <p class="text-white">+8801916-373663</p>
+
+                        <h5 class="fs-18 mb-3 text-white">Follow Me</h5>
+                        <ul class="list-inline mt-15">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/obaydullah.obaydullah.3" class="footer-social-icon" target="_blank"><i class="mdi mdi-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/devobaydullah94" class="footer-social-icon" target="_blank"><i class="mdi mdi-github"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://devobaydullah.netlify.app" class="footer-social-icon" target="_blank"><i class="mdi mdi-web"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <h5 class="fs-22 mb-3 fw-semibold text-white">My Recent Work</h5>
+                                <ul class="list-unstyled footer-nav">
+                                    <li><a href="https://todoforus.netlify.app" class="footer-link">To-Do Web App</a></li>
+                                    <li><a href="https://assassins-paradise.vercel.app" class="footer-link">Assassin's Paradise</a></li>
+                                    <li><a href="https://card-example-01.vercel.app" class="footer-link">Simple Card</a></li>
+                                    <li><a href="https://devobaydullah.netlify.app" class="footer-link">Portfolio Web</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6">
+                                <h5 class="fs-22 mb-3 fw-semibold text-white">My Portfolio</h5>
+                                <ul class="list-unstyled footer-nav">
+                                    <li><a href="https://weatherappforus.netlify.app" class="footer-link">Android Weather App</a></li>
+                                    <li><a href="https://pakalanka.netlify.app" class="footer-link">Pakalanka</a></li>
+                                    <li><a href="https://bughunter.netlify.app" class="footer-link">Banglar Obhijan</a></li>
+                                    <li><a href="https://bugmart.netlify.app" class="footer-link">BugMart</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-tagline">
+            <div class="container">
+                <div class="row justify-content-between py-2">
+                    <div class="col-md-6">
+                        <p class="text-white opacity-75 mb-0 fs-14"><script>document.write(new Date().getFullYear())</script> © SkyVue Weather Web App</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://github.com/devobaydullah94" class="text-white opacity-75 fs-14" target="_blank">Developed by <a href="https://devobaydullah.netlify.app" class="text-white opacity-75 fs-14">Md Obaydullah</a></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer & cta end -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" class="back-to-top-btn btn btn-gradient-primary" id="back-to-top"><i class="mdi mdi-chevron-up"></i></a>
+
+    <script src="js/app.js"></script>
+    <script src="js/forecast-card.js"></script>
+    </body>
+</html>

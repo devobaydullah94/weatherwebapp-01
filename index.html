@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Weather app" />
+        <meta name="keywords" content="WeatherApp, Forecast" />
+        <meta name="author" content="Md Obaydullah" />
+
+        <!-- Site Title -->
+        <title>SkyVue Weather App</title>
+        <!-- Site favicon -->
+        <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+
+        <!--Material Icon -->
+        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/weather-card.css">
+        <link rel="stylesheet" type="text/css" href="css/forecast-card.css">
+
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="60">
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky-dark" id="navbar-sticky">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="logo text-uppercase" href="index.html">
+                    <img src="images/logo/logo-dark.png" alt=""/>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#weather-section" class="nav-link">Weather</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#forecast-section" class="nav-link">Forecast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#faq" class="nav-link">Faq</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Hero Start -->
+        <section class="hero-2" id="home">
+            <div class="bg-overlay-img"></div>
+            <div class="container">
+                <div class="row align-items-center justify-content-center hero-content">
+                    <div class="col-lg-6">
+                        <div class="avatar avatar-xl text-primary mb-5">
+                            <i class="mdi mdi-weather-cloudy mb-0 h2"></i>
+                        </div>
+                        <h1 class="hero-title fw-bold mb-4 display-5">Get current weather with <span class="text-primary">SkyVue </span>web app</h1>
+                        <p class="opacity-75 mb-4 pb-3 fs-17">Stay informed and plan your day with this Weather Web App. Experience accurate and up-to-date weather forecasts based your location. Whether you're preparing for a trip, planning outdoor activities, or just curious about the current conditions, this app provides you with comprehensive weather data at your fingertips. With user-friendly features and real-time updates. Explore the world of weather effortlessly with this Weather Web App.</p>
+                        <a href="weather-card.html" class="btn btn-lg btn-gradient-primary">Check Weather</a>
+                        <a href="forecast-card.html" class="btn btn-lg btn-outline-dark">View Forecast</a>
+                    </div>
+
+                    <div class="col-md-8 col-lg-5 offset-lg-1">
+                        <div class="hero-2-img mt-5 mt-lg-0">
+                            <img src="images/heros/hero-2-img.png" alt="" class="img-fluid rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero End -->
+
+                <!-- Simple Guide Start -->
+        <section class="section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-8 col-lg-6 text-center">
+                        <h6 class="subtitle">Simple <span class="fw-bold">Guide</span></h6>
+                        <h2 class="title">How to Check the Weather?</h2>
+                        <p class="text-muted">To check the weather, follow these steps:</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="work-box px-lg-5 text-center mb-5 mb-lg-0">
+                            <div class="work-icon bg-soft-primary mb-4">
+                                <i class="mdi mdi-weather-fog"></i>
+                            </div>
+                            <h5 class="fw-semibold">STEP - 01</h5>
+                            <p class="text-muted">Navigate to the "Weather" tab.</p>
+                            <img src="images/arrow/arrow-top.png" alt="" class="work-arrow" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="work-box px-lg-5 text-center mb-5 mb-lg-0">
+                            <div class="work-icon bg-soft-success mb-4">
+                                <i class="mdi mdi-city"></i>
+                            </div>
+                            <h5 class="fw-semibold">STEP - 02</h5>
+                            <p class="text-muted">Enter the desired city name in the "Enter city name" field.</p>
+                            <img src="images/arrow/arrow-bottom.png" alt="" class="work-arrow" />
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="work-box px-lg-5 text-center mb-5 mb-lg-0">
+                            <div class="work-icon bg-soft-warning mb-4">
+                                <i class="mdi mdi-gesture-tap-button"></i>
+                            </div>
+                            <h5 class="fw-semibold">STEP - 03</h5>
+                            <p class="text-muted">Click on the "Get Weather" button.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Simple Guide end -->
+        
+        <!-- Weather Card Start -->
+        <section class="section bg-light" id="weather-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-12 col-lg-12 text-center">
+                        <div class="weather-card-container">
+                            <div class="weather-card-body">
+                                <!-- Weather Heading -->
+                                <h2 class="weather-card-heading">Weather Information</h2>
+                                <!-- Input Button -->
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="cityInput-1" required="" placeholder="Enter city name">
+                                    <button onclick="getWeatherOne()">Get Weather</button>
+                                </div>
+                                <!-- Weather Card -->
+                                <div class="weather-card-details" id="weather-card" style="display: none;">
+                                    <div class="circle1"></div>
+                                    <div class="circle2"></div>
+                                    <div class="circle3"></div>
+                                    <div class="content">
+                                        <!-- Weather Condition & Times -->
+                                        <h1 class="condition"><img id="conditionIcon" class="condition-icon" src="https://openweathermap.org/img/wn/50d.png" alt="Condition img"> <span id="condition">Conditions</span></h1>
+                                        <h1 class="time"><i class="mdi mdi-clock-time-three-outline"></i> <span id="time">Times</span></h1>
+                                        <!-- Show Temperature  -->
+                                        <div class="temperature-container">
+                                            <h1 id="temp" class="temp">0</h1>
+                                            <!-- Buttons for C | F -->
+                                            <div class="temperature-button">
+                                                <h1 class="temp">
+                                                    <a class='celsius active' id='celsius' href="#">&deg;C</a>
+                                                    <span class='divider secondary'>|</span>
+                                                    <a class='fahrenheit' id='fahrenheit' href="#">&deg;F</a>
+                                                </h1>
+                                            </div>
+                                        </div>
+                                        <!-- Weather Condition Image -->
+                                        <div class="image-container">
+                                            <img id="weatherImage" src="images/condition-img/default.png" alt="Weather Image">
+                                        </div>
+                                        <!-- Wind Speed & Location -->
+                                        <h1 class="wind-speed"><i class="mdi mdi-weather-windy"></i> <span id="windSpeed">Wind: </span></h1>
+                                        <h1 class="location"><i class="mdi mdi-map-marker-outline"></i> <span id="location">Location</span></h1>
+                                    </div>
+                                </div>
+
+                                <div id="credit-text-1" style="display: none;">
+                                    <p>This App Created By Md Obaydullah</p>
+                                    <p>Thank You For Using This App</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <a href="#forecast-section" onclick="getForecastScroll()" id="scrollbtn" class="btn scrollbtn" style="display: none;">Click Here to View Forecast<br><div class="updown"><i class="mdi mdi-chevron-down updown"></i></div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Weather Card End -->
+
+        <!-- Forecast Start -->
+        <section class="section bg-light overflow-hidden" id="forecast-section">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12 col-lg-12 text-center">
+                <div class="forecast-card-container">
+                <div class="forecast-card-body">
+                    <!-- Weather Heading -->
+                    <h2 class="weather-card-heading">5 Days Forecast Information</h2>
+                    <!-- Input Button -->
+                    <div class="input-group">
+                    <input type="text" class="form-control" id="cityInput-2" required="" placeholder="Enter city name">
+                    <button onclick="getForecast()">View Forecast</button>
+                    </div>
+                    <!-- Forecast Card -->
+                    <div class="forecast-card-details" id="forecast-card" style="display: none;">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="temperature-button">
+                        <h1 class="forecast-button">
+                            <a class='celsius active' id='celsiusbtn' href="#">&deg;C</a>
+                            <span class='divider secondary'>|</span>
+                            <a class='fahrenheit' id='fahrenheitbtn' href="#">&deg;F</a>
+                        </h1>
+                    </div>
+                    <div class="content" id="forecast-content">
+                        <!-- Forecast data will be displayed here -->
+                    </div>
+                    </div>
+                </div>
+
+                <div id="credit-text-2" style="display: none;">
+                    <p>This App Created By Md Obaydullah</p>
+                    <p>Thank You For Using This App</p>
+                </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!-- Forecast End -->
+
+        <!-- Faqs Start -->
+        <section class="section bg-light" id="faq">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-8 col-lg-6 text-center">
+                        <h2 class="title">Frequently Asked Questions</h2>
+                        <p class="text-muted">Here are some Frequently Asked Questions, which are our users asked.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <img src="images/faq/faq.png" alt="" class="img-fluid d-block mx-auto" />
+                    </div>
+
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="accordion accordion-flush faqs-accordion mt-4 mt-lg-0" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                        How to install this weather app?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body text-secondary">
+                                        See the current weather information seamlessly, no app installation needed.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordion-header end -->
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        Here's how to check the weather?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body text-secondary">
+                                            To check the weather, follow these steps: <br>
+
+                                            1. Navigate to the "Weather" tab. <br>
+                                            2. Enter the desired city name in the "Enter city name" field. <br>
+                                            3. Click on the "Get Weather" button. <br>
+                                            This will provide you with the current weather information for the specified city.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordion-header end -->
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        Here's how to check the forecast?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body text-secondary">
+                                        To check the weather, follow these steps: <br>
+
+                                        1. Navigate to the "Forecast" tab. <br>
+                                        2. Enter the desired city name in the "Enter city name" field. <br>
+                                        3. Click on the "Get Forecast" button. <br>
+                                        This will provide you with the 5 days forecast information for the specified city.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordion-header end -->
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                        Does it cost any money to use it?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body text-secondary">
+                                        No, you don't need any money to use it, it's completely free.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- accordion-header end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Faqs End -->
+
+        <!-- Contact Start -->
+        <section class="section bg-light" id="contact">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-8 col-lg-6 text-center">
+                        <h2 class="title">Get in Touch</h2>
+                        <p class="text-muted">If you have any questions, don't hesitate to contact me.</p>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="d-flex align-items-center mb-5">
+                            <div class="flex-shrink-0">
+                                <img src="images/contact/hello-icon.png" alt="..." height="80" class="" />
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h2 class="mb-0">Say Hello!</h2>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <div class="contact-icon bg-soft-primary text-primary">
+                                        <i class="mdi mdi-email"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fs-18">Email</h5>
+                                </div>
+                            </div>
+                            <p class="mb-1"><i class="mdi mdi-arrow-right-thin text-muted me-1"></i><a href="javascript:void(0);" class="text-secondary">info@skyvue.com</a></p>
+                            <p class="mb-1"><i class="mdi mdi-arrow-right-thin text-muted me-1"></i><a href="javascript:void(0);" class="text-secondary">rohman651585@gmail.com</a></p>
+                        </div>
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <div class="contact-icon bg-soft-primary text-primary">
+                                        <i class="mdi mdi-phone"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fs-18">Phone</h5>
+                                </div>
+                            </div>
+                            <p class="mb-1"><i class="mdi mdi-arrow-right-thin text-muted me-1"></i><a href="javascript:void(0);" class="text-secondary">+8801916-373663</a></p>
+                        </div>
+                        <div class="">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0">
+                                    <div class="contact-icon bg-soft-primary text-primary">
+                                        <i class="mdi mdi-google-maps"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-0 fs-18">Address</h5>
+                                </div>
+                            </div>
+                            <h5 class="fs-16 mb-2 text-secondary"><i class="mdi mdi-arrow-right-thin text-muted me-1"></i> Head Office</h5>
+                            <p class="text-muted lh-base">Satmasjid Road, Mohammadpur - Dhaka -1207</p>
+                            <h5 class="fs-16 mb-2 text-secondary"><i class="mdi mdi-arrow-right-thin text-muted me-1"></i> Branch Office</h5>
+                            <p class="text-muted lh-base mb-0">Amtola Baazar, Pirerbag, Mirpur 1, Dhaka, 1216</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="card contact-form rounded-lg mt-4 mt-lg-0">
+                            <div class="card-body p-5">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formFirstName" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" id="formFirstName" placeholder="Your first name..." required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formLastName" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" id="formLastName" placeholder="Last first name..." required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formEmail" class="form-label">Email Address</label>
+                                                <input type="email" class="form-control" id="formEmail" placeholder="Your email..." required />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formPhone" class="form-label">Phone Number</label>
+                                                <input type="text" class="form-control" id="formPhone" placeholder="Type phone number..." required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="formSubject" class="form-label">Subject</label>
+                                                <input type="text" class="form-control" id="formSubject" placeholder="Type subject..." required />
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-4">
+                                                <label for="formMessages" class="form-label">Messages</label>
+                                                <textarea class="form-control" id="formMessages" rows="4" placeholder="Type messages..." required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-gradient-primary">Send Messages <i class="mdi mdi-send ms-1"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact End -->
+
+        <!-- Footer & cta Start -->
+        <section class="footer bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <div class="footer-logo mb-4">
+                            <a href="#">
+                                <img src="images/logo/logo-light.png" alt="" />
+                            </a>
+                        </div>
+                        <a href="#" class="text-white">info@skyvue.com</a>
+                        <p class="text-white">+8801916-373663</p>
+
+                        <h5 class="fs-18 mb-3 text-white">Follow Me</h5>
+                        <ul class="list-inline mt-15">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/obaydullah.obaydullah.3" class="footer-social-icon" target="_blank"><i class="mdi mdi-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/devobaydullah94" class="footer-social-icon" target="_blank"><i class="mdi mdi-github"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://devobaydullah.netlify.app" class="footer-social-icon" target="_blank"><i class="mdi mdi-web"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <h5 class="fs-22 mb-3 fw-semibold text-white">My Recent Work</h5>
+                                <ul class="list-unstyled footer-nav">
+                                    <li><a href="https://todoforus.netlify.app" class="footer-link">To-Do Web App</a></li>
+                                    <li><a href="https://assassins-paradise.vercel.app" class="footer-link">Assassin's Paradise</a></li>
+                                    <li><a href="https://card-example-01.vercel.app" class="footer-link">Simple Card</a></li>
+                                    <li><a href="https://devobaydullah.netlify.app" class="footer-link">Portfolio Web</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-6 col-md-6">
+                                <h5 class="fs-22 mb-3 fw-semibold text-white">My Portfolio</h5>
+                                <ul class="list-unstyled footer-nav">
+                                    <li><a href="https://weatherappforus.netlify.app" class="footer-link">Android Weather App</a></li>
+                                    <li><a href="https://pakalanka.netlify.app" class="footer-link">Pakalanka</a></li>
+                                    <li><a href="https://bughunter.netlify.app" class="footer-link">Banglar Obhijan</a></li>
+                                    <li><a href="https://bugmart.netlify.app" class="footer-link">BugMart</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-tagline">
+            <div class="container">
+                <div class="row justify-content-between py-2">
+                    <div class="col-md-6">
+                        <p class="text-white opacity-75 mb-0 fs-14"><script>document.write(new Date().getFullYear())</script> © SkyVue Weather Web App</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="https://github.com/devobaydullah94" class="text-white opacity-75 fs-14" target="_blank">Developed by <a href="https://devobaydullah.netlify.app" class="text-white opacity-75 fs-14">Md Obaydullah</a></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer & cta End -->
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" class="back-to-top-btn btn btn-gradient-primary" id="back-to-top"><i class="mdi mdi-chevron-up"></i></a>
+
+        <!-- javascript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- Main -->
+        <script src="js/app.js"></script>
+        <script src="js/weather-card.js"></script>
+        <script src="js/forecast-card.js"></script>
+    </body>
+</html>

@@ -1,0 +1,327 @@
+/* Forecast Card Container & Body */
+
+#forecast-section {
+  background-image: url(../images/weather/snow.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+  animation: LeftRight 180s linear infinite;
+  transition: background-position 90s ease-in-out;
+}
+
+#forecast-section-page {
+  background-image: url(../images/weather/snow.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-blend-mode: overlay;
+  animation: RightLeft 180s linear infinite;
+  transition: background-position 90s ease-in-out;
+}
+
+#forecast-section-page .forecast-card-container {
+  background-image: url(../images/weather/bg_animation_01.png);
+}
+
+.forecast-card-container {
+    background-image: url(../images/weather/bg_animation_02.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: LeftRight 240s linear infinite;
+    transition: background-position 120s ease-in-out;
+  }
+
+  @keyframes LeftRight {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+      }
+  }
+  
+  weather-card-body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .weather-card-heading {
+    color: #1f60eb80;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.heading-page {
+  color: #ffffff;
+}
+
+/* Input Start */
+
+  /* Input Group */
+
+.input-group {
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(to left, #1f60eb80 0%, #94b4f580 100%);
+    padding: 16px;
+    position: relative;
+    box-shadow: none;
+    border: 0;
+    border-radius: 10px;
+    max-width: 700px;
+    margin-bottom: -18px;
+}
+
+/* City Input */
+
+.input-group .form-control {
+    border-color: #fff;
+}
+
+.input-group input {
+    border: none;
+    background: transparent;
+    width: 65%;
+    color: #fff !important;
+    font-size: 16px;
+    padding: 10;
+    box-shadow: none;
+}
+
+.input-group ::placeholder {
+    color: #fff !important;
+}
+
+.input-group input:focus {
+    outline: 0;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+}
+
+.input-group input[type=text] {
+    background: linear-gradient(to right, #1f60eb29 0%, #94b4f500 100%);
+  }
+
+.input-group input[type=text]:focus {
+    background: linear-gradient(to right, #1f60eb67 0%, #94b4f500 100%);
+  }
+
+  .input-group input[type=text]:valid {
+    background: linear-gradient(to right, #1f60eb80 0%, #94b4f500 100%);
+  }
+
+/* Get Weather Button */
+
+.input-group button {
+    border: none;
+    background: transparent;
+    width: 35%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    text-align: end;
+    padding-left: 16px;
+    border-left: 1px solid #fff;
+}
+  
+  /* Input End */
+
+  /* Forecast Card Details */
+
+  .forecast-card-details {
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    height: 350px;
+    width: 700px;
+    color: #5a5a5a;
+    background: linear-gradient(to left, #1f60eb60 0%, #94b4f560 100%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+  }
+
+  .card-page {
+    overflow: hidden;
+    z-index: 10;
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    height: 350px;
+    width: 700px;
+    color: #ffffff;
+    background: linear-gradient(to left, #1f60eb60 0%, #94b4f560 100%);
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+  }
+
+
+  /*  BACKGROUND  */
+
+  #forecast-card .circle1 {
+    z-index: 2;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    right: -20px;
+    top: -30px;
+    border-radius: 50%;
+    background-color: #6794f5;
+    animation: enlarge;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out;
+}
+
+#forecast-card .circle2 {
+    z-index: -2;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    right: -50px;
+    top: -70px;
+    border-radius: 50%;
+    background-color: #8eadf0;
+    animation: enlarge;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out;
+}
+
+#forecast-card .circle3 {
+
+    z-index: -3;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    right: -50px;
+    top: -100px;
+    border-radius: 50%;
+    background-color: #79a1f7;
+    animation: enlarge;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition: all ease-in-out;
+}
+
+/*  CONTENT  */
+
+/*  C & F Button */
+
+.forecast-button .celsius, .fahrenheit, .divider {
+    font-family: "Roboto", sans-serif;
+	font-size: 28px;
+}
+
+.divider {
+	margin: 0 0;
+}
+
+.forecast-button a {
+    color: #5a5a5a;
+    opacity: 0.54;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.forecast-button a:hover {
+    color: #5a5a5a;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.forecast-button .active {
+  opacity: 1;
+}
+
+
+#forecast-button a {
+  color: #ffffff !important;
+  opacity: 0.54;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+#forecast-button a:hover {
+  color: #ffffff !important;
+  opacity: 1;
+  text-decoration: none;
+}
+
+#forecast-button .active {
+opacity: 1;
+}
+
+  
+  /* Forecast Content */
+
+  #forecast-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -30px;
+  }
+  
+  /* Days */
+
+  .forecast-card-details div {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Weather Icon */
+
+  .forecast-card-details div img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-top: 15px;
+  }
+  
+  /* Temperature and Day */
+
+  .forecast-card-details div p {
+    margin: 25px 0;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .forecast-card-details {
+      flex-direction: column;
+    }
+  }
+  
+  @keyframes enlarge{
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+#credit-text-2 p {
+    opacity: 0.2;
+    color: #94b4f5;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
